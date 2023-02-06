@@ -1,0 +1,163 @@
+/* Body CSS */
+body
+{
+    margin:0;
+}
+
+/* Top Navigation Bar */
+.topNav
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    width:95vw;
+}
+/* Title Div */
+.titleDiv
+{
+
+}
+/* Title Text (My Name) */
+.titleText
+{
+    font-family: 'Aboreto', cursive;
+    font-size: 250%;
+}
+/* Social Div */
+.socialDiv
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+/* Instagram and Twitter together */
+.insta, .twitter
+{
+    margin: auto;
+    padding: 15px;
+    margin-right: 20px;
+}
+.insta:hover, .twitter:hover
+{
+    background-color: rgba(204, 204, 204, 0.694);
+    border-radius: 25%;
+}
+/* Instagram */
+.insta
+{
+    transition: 1s;
+}
+/* Instagram Hover */
+.insta:hover > svg
+{
+    transition: 1s;
+    scale: 1.25;
+}
+/* Twitter */
+.twitter
+{
+    transition: 1s;
+}
+/* Twitter Hover */
+.twitter:hover > svg
+{
+    transition: 1s;
+    scale: 1.25;
+}
+/* All the SVGs */
+svg
+{
+    transition: 1s;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Categories */
+.categories
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+}
+
+/* All Categories Styles */
+.cat
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.imgDiv
+{
+
+}
+.catImg
+{
+    width: 65%;
+    filter: blur(3.5px);
+    transition: .5s;
+}
+.catImg:hover
+{
+    filter: blur(0);
+}
+
+.catTitle
+{
+    position:absolute;
+    margin-left: 22.5%;
+    box-sizing: border-box;
+}
+
+.titles
+{
+    font-size: 300%;
+    color:white;
+}
+
+
+#nature
+{
+    margin-left: 20%;
+}
+#arch
+{
+    margin-left: 15%;
+}
+
+
+
+.contactDiv
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: -50px;
+    background-color: rgba(82, 82, 82, 0.206);
+}
+.contactText
+{
+
+}
+.GIT
+{
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Prata', serif;
+    font-size: 250%;
+}
+.infoDiv
+{
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Prata', serif;
+    font-size: 140%;
+}
+
+.copyright
+{
+    text-align: center;
+}
+.CR
+{
+    font-family: 'Barlow', sans-serif;
+    font-family: 'DM Serif Display', serif;
+}
