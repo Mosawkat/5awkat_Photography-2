@@ -2,6 +2,7 @@
 body
 {
     margin:0;
+    background-color: rgb(238, 238, 238);
 }
 
 /* Top Navigation Bar */
@@ -87,64 +88,67 @@ svg
     align-items: center;
     margin-bottom: 150px;
 }
-
+/* Imaages Div */
 .imgDiv
 {
 
 }
+/* Images for the categories */
 .catImg
 {
-    width: 65%;
-    filter: blur(3.5px);
-    transition: .5s;
+    width: 55%;
+    filter: brightness(50%) drop-shadow(0px 0px 0px gray);
+    transition: 1s;
 }
+/* Hover effect on the category images */
 .catImg:hover
 {
-    filter: blur(0);
+    filter: brightness(100%) drop-shadow(8px 8px 10px gray);
 }
-
+/* Title of Category Div */
 .catTitle
 {
     position:absolute;
     margin-left: 22.5%;
     box-sizing: border-box;
 }
-
+/* Actual title of the categories */
 .titles
 {
     font-size: 300%;
-    color:white;
+    color:rgb(255, 255, 255);
+    transition: .25s;
 }
-
-
-#nature
+#ppl
 {
     margin-left: 20%;
 }
-#arch
+#people
 {
-    margin-left: 15%;
+    color:rgb(255, 255, 255);
 }
-
-
-
+/* Contact Me Section */
 .contactDiv
 {
     display: flex;
     justify-content: space-around;
     margin-top: -50px;
     background-color: rgba(82, 82, 82, 0.206);
+    align-items: center;
 }
+/* Contact text */
 .contactText
 {
 
 }
+/* Get In Touch Text */
 .GIT
 {
     font-family: 'Barlow', sans-serif;
     font-family: 'Prata', serif;
     font-size: 250%;
 }
+/* Email and phone Div */
 .infoDiv
 {
     font-family: 'Barlow', sans-serif;
@@ -152,12 +156,160 @@ svg
     font-size: 140%;
 }
 
+.EmailDiv, .PNDiv
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -45px;
+    margin-top: -45px;
+}
+#ESVG, #PSVG
+{
+    position: relative;
+    transform: translateY(35px);
+    margin-right: 20px;
+}
+
+
+
+/* Copyright Div */
 .copyright
 {
     text-align: center;
 }
+/* Copyright Text */
 .CR
 {
     font-family: 'Barlow', sans-serif;
     font-family: 'DM Serif Display', serif;
+}
+
+
+
+
+
+@media screen and (max-width: 600px)
+{
+    .titleText
+    {
+        font-family: 'Aboreto', cursive;
+        font-size: 200%;
+    }
+    .topNav
+    {
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+    }
+    .socialDiv
+    {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    /* Instagram and Twitter together */
+    .insta, .twitter
+    {
+        margin: auto;
+        padding: 15px;
+    }
+    /* Instagram and Twitter */
+    .insta, .twitter
+    {
+        transition: 1s;
+    }
+
+
+    .categories
+    {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+    
+    #ports
+    {
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    /* All Categories Styles */
+    .cat
+    {
+        display: flex;
+        align-items: center;
+    }
+    /* Images for the categories */
+    .catImg
+    {
+        width: 85%;
+        filter: brightness(50%) drop-shadow(0px 0px 0px gray);
+        transition: .5s;
+    }
+    /* Title of Category Div */
+    .catTitle
+    {
+        position:absolute;
+        box-sizing: border-box;
+    }
+    #ppl
+    {
+        margin-left: 25%;
+    }
+    #sports
+    {
+        margin-left: 35%;
+    }
+    /* Actual title of the categories */
+    .titles
+    {
+        font-size: 300%;
+        color:white;
+        transition: .25s;
+    }
+
+
+    /* Contact Me Section */
+    .contactDiv
+    {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(82, 82, 82, 0.206);
+        align-items: center;
+        padding: 5%;
+    }
+    /* Contact text */
+    .contactText
+    {
+        
+    }
+    /* Get In Touch Text */
+    .GIT
+    {
+        font-family: 'Barlow', sans-serif;
+        font-family: 'Prata', serif;
+        font-size: 170%;
+    }
+    /* Email and phone Div */
+    .infoDiv
+    {
+        font-family: 'Barlow', sans-serif;
+        font-family: 'Prata', serif;
+        font-size: 65%;
+        padding: 5%;
+    }
+    
+    .EmailDiv, .PNDiv
+    {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    #ESVG, #PSVG
+    {
+        position: relative;
+        scale: .9;
+        transform: translateY(10px);
+        margin-right: 10px;
+    }
+    
 }
