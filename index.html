@@ -12,12 +12,6 @@
 </head>
 <script>
      $( document ).ready(function() {
-        $("#light").hide();
-
-        $("#dark").click(function(){
-            //$(this).toggleClass('active');
-        });
-
         $('#peopleImg').hover(
             function(){
                 $('#people').css('visibility', 'hidden');
@@ -55,7 +49,6 @@
               </svg>
             </a>
         </div>
-        <!-- Implement Light / Dark mode toggle here -->
     </div>
 </div>
 
@@ -63,14 +56,14 @@
     <div class="cat portraits" id="por">
             <a loading="lazy" draggable="false" href="portraits.html"> <img class="catImg"  id="peopleImg" src="portrait.JPG"/> </a>
             <div class="catTitle" id="ppl">
-                <h3 class="titles" id="people"> Portraits </h3>
+                <h3 class="titles" id="people"> <a href="portraits.html" style="text-decoration: none; color:white;"> Portraits </a> </h3>
             </div>
     </div>
 
     <div class="cat sports" id="spor">
             <a loading="lazy" draggable="false" href="sports.html"> <img class="catImg"  id="sportsImg" src="sport.jpg"/> </a>
             <div class="catTitle" id="sports">
-                <h3 class="titles"> Sports </h3>
+                <h3 class="titles"> <a href="sports.html" style="text-decoration: none; color:white;"> Sports </a> </h3>
             </div>
     </div>
 </div>

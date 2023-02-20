@@ -87,6 +87,7 @@ svg
     display: flex;
     align-items: center;
     margin-bottom: 150px;
+    animation: fadeInUp 1s;
 }
 /* Imaages Div */
 .imgDiv
@@ -111,13 +112,14 @@ svg
     position:absolute;
     margin-left: 22.5%;
     box-sizing: border-box;
+    opacity: 0;
+    animation: fadeInUp 1s 1s forwards;
 }
 /* Actual title of the categories */
 .titles
 {
     font-size: 300%;
     color:rgb(255, 255, 255);
-    transition: .25s;
 }
 #ppl
 {
@@ -312,4 +314,23 @@ svg
         margin-right: 10px;
     }
     
+}
+
+
+
+@keyframes fadeInUp 
+{
+  from 
+  {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to 
+  {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
