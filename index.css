@@ -85,9 +85,11 @@ svg
 .cat
 {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 150px;
     animation: fadeInUp 1s;
+    position: relative;
 }
 /* Imaages Div */
 .imgDiv
@@ -109,8 +111,11 @@ svg
 /* Title of Category Div */
 .catTitle
 {
-    position:absolute;
-    margin-left: 22.5%;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
     box-sizing: border-box;
     opacity: 0;
     animation: fadeInUp 1s 1s forwards;
@@ -118,12 +123,8 @@ svg
 /* Actual title of the categories */
 .titles
 {
-    font-size: 300%;
+    font-size: 7vh;
     color:rgb(255, 255, 255);
-}
-#ppl
-{
-    margin-left: 20%;
 }
 #people
 {
@@ -189,7 +190,7 @@ svg
 
 
 
-
+/* Mobile / 600px only */
 @media screen and (max-width: 600px)
 {
     .titleText
@@ -252,18 +253,14 @@ svg
         position:absolute;
         box-sizing: border-box;
     }
-    #ppl
+    #ppl, #sports
     {
-        margin-left: 25%;
-    }
-    #sports
-    {
-        margin-left: 35%;
+        top: 30%;
     }
     /* Actual title of the categories */
     .titles
     {
-        font-size: 300%;
+        font-size: 7.5vh;
         color:white;
         transition: .25s;
     }
@@ -317,7 +314,7 @@ svg
 }
 
 
-
+/* Animationas */
 @keyframes fadeInUp 
 {
   from 
