@@ -6,7 +6,6 @@
 <style>
 </style>
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- Query-->
     <title> Portraits </title>
@@ -16,6 +15,42 @@
     function scrollTopAnimated() {
         $("html, body").animate({ scrollTop: "0" });
     }
+</script>
+<script>
+    // Get all the imgDiv elements
+const imgDivs = document.querySelectorAll('.imgDiv');
+
+// Add a touch event listener to each imgDiv
+imgDivs.forEach(imgDiv => {
+  // Set the initial touch coordinates to (0, 0)
+  let initX = 0;
+  let initY = 0;
+  // Set the initial scale to 1
+  let initScale = 1;
+  
+  imgDiv.addEventListener('touchstart', e => {
+    // Get the touch coordinates
+    initX = e.touches[0].clientX;
+    initY = e.touches[0].clientY;
+    // Set the initial scale to the current scale of the image
+    initScale = e.currentTarget.querySelector('.inImg').style.transform.match(/scale\((\d+(\.\d+)?)\)/)[1] || 1;
+  });
+  
+  imgDiv.addEventListener('touchmove', e => {
+    // Calculate the distance between the initial touch coordinates and the current touch coordinates
+    const diffX = e.touches[0].clientX - initX;
+    const diffY = e.touches[0].clientY - initY;
+    // Set the new scale based on the distance between the initial touch coordinates and the current touch coordinates
+    const newScale = Math.max(1, initScale + (Math.abs(diffX) + Math.abs(diffY)) / 1000);
+    // Set the new scale of the image
+    e.currentTarget.querySelector('.inImg').style.transform = `scale(${newScale})`;
+  });
+  
+  imgDiv.addEventListener('touchend', e => {
+    // Reset the scale of the image to 1
+    e.currentTarget.querySelector('.inImg').style.transform = 'scale(1)';
+  });
+});
 </script>
 <body>
     <div class="topNav">
@@ -58,6 +93,9 @@
             <img class="inImg" loading="lazy" src="people18.JPG" /> <!-- JRD -->
         </div>
         <div class="imgDiv hidden">
+            <img class="inImg" loading="lazy" src="people7.JPG" /> <!-- Adib and Tamim -->
+        </div>
+        <div class="imgDiv hidden">
             <img class="inImg" loading="lazy" src="people23.JPG" /> <!-- Golden -->
         </div>
         <div class="imgDiv hidden">
@@ -73,12 +111,6 @@
             <img class="inImg" loading="lazy" src="people12.JPG" /> <!-- Ahnaf & Mizan -->
         </div>
         <div class="imgDiv hidden">
-            <img class="inImg" loading="lazy" src="people7.JPG" /> <!-- Adib and Tamim -->
-        </div>
-        <div class="imgDiv hidden">
-            <img class="inImg" loading="lazy" src="people34.JPG" /> <!-- Zahir and Murad -->
-        </div>
-        <div class="imgDiv hidden">
             <img class="inImg" loading="lazy" src="people15.JPG" /> <!-- Mo 2 -->
         </div>
         <div class="imgDiv hidden">
@@ -86,6 +118,9 @@
         </div>
         <div class="imgDiv hidden">
             <img class="inImg" loading="lazy" src="people24.JPG" /> <!-- Blue Models -->
+        </div>
+        <div class="imgDiv hidden">
+            <img class="inImg" loading="lazy" src="people34.JPG" /> <!-- Zahir and Murad -->
         </div>
         <div class="imgDiv hidden">
             <img class="inImg" loading="lazy" src="people25.JPG" /> <!-- Omar -->
