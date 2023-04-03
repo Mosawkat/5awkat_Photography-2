@@ -77,7 +77,7 @@ svg
 .categories
 {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     text-align: center;
 }
 
@@ -99,7 +99,7 @@ svg
 /* Images for the categories */
 .catImg
 {
-    width: 55%;
+    width: 75%;
     filter: brightness(50%) drop-shadow(0px 0px 0px gray);
     transition: 1s;
 }

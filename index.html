@@ -28,6 +28,14 @@
                 function(){
                 $('#sports').css('visibility', 'visible');
             });
+
+            $('#eventImg').hover(
+            function(){
+                $('#events').css('visibility', 'hidden');
+            },
+                function(){
+                $('#events').css('visibility', 'visible');
+            });
      });
 </script>
 <body>
@@ -63,12 +71,20 @@
     </div>
 
     <div class="cat sports" id="spor">
-            <a loading="lazy" draggable="false" href="sports.html"> <img class="catImg"  id="sportsImg" src="sport.jpg"/> </a>
-            <div class="catTitle" id="sports">
-                <h3 class="titles"> <a href="sports.html" style="text-decoration: none; color:white;"> Sports </a> </h3>
-            </div>
+        <a loading="lazy" draggable="false" href="sports.html"> <img class="catImg"  id="sportsImg" src="sport.jpg"/> </a>
+        <div class="catTitle" id="sports">
+            <h3 class="titles"> <a href="sports.html" style="text-decoration: none; color:white;"> Sports </a> </h3>
+        </div>
+    </div>
+
+    <div class="cat events" id="evn">
+        <a loading="lazy" draggable="false" href="events.html"> <img class="catImg"  id="eventImg" src="event.JPG"/> </a>
+        <div class="catTitle" id="event">
+            <h3 class="titles" id="events"> <a href="events.html" style="text-decoration: none; color:white;"> Events </a> </h3>
+        </div>
     </div>
 </div>
+
 
 
 <div class="contactDiv">
