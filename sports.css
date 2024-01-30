@@ -1,0 +1,60 @@
+.imgDiv
+{
+    margin-bottom: -5px;
+}
+.homeSP, .nextPageSP, .BTTSP
+{
+    padding: .5%;
+    background-color: rgba(167, 167, 167, 0.39);
+    transition: .5s;
+}
+.homeSP
+{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.homeSP:hover
+{
+    background-color: rgba(255, 255, 255, 0.658);
+}
+.BTTSP
+{
+    background-color: rgba(167, 167, 167, 0.39);
+}
+.TASP
+{
+    margin-top: 20px;
+}
+.BTTSP:hover
+{
+    background-color: rgba(255, 255, 255, 0.658);
+}
+.nextPageSP:hover
+{
+    background-color: rgba(255, 255, 255, 0.658);
+}
+.nextPageSP
+{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+@media screen and (max-width: 600px)
+{
+    body
+    {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .TASP
+    {
+        margin-top: 28.5px;
+    }
+    svg
+    {
+        height: 40px;
+        width: 40px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
